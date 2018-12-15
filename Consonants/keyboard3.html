@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keyboard 3</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/jquery.maphilight.js"></script>
+<style>
+	body 
+	{
+
+		overflow: scroll;
+	}
+	.img-box
+	{
+		display:flex;
+		justify-content: center;
+	}
+	.img-make-resp
+		{
+			min-width:792px;
+			min-height:612px;
+			background-repeat: no-repeat; 
+		}
+		
+
+</style>
+</head>
+<body>
+
+		
+		<img src="images/keyboard3.png" class="img-make-resp" usemap="#keyboard3">	
+		<map name="keyboard3" id="chart"  >
+		  	<area shape="rect" coords="283,218,319,241" alt="[ɘɹ]" title="[ɘɹ]" href="" onclick="LetterSound('');" >	
+			<area shape="rect" coords="458,209,519,230"  alt="turkey" title="turkey" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="523,209,568,229" alt="bird" title="bird" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="573,210,621,228" alt="first" title="first" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="461,235,523,255" alt="winner" title="winner" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="531,236,582,255" alt="letter" title="letter" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="590,236,652,255" alt="doctor" title="doctor" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="284,257,321,280" alt="[ɑɹ]" title="[ɑɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="459,259,502,280" alt="barn" title="barn" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="509,261,551,280" alt="car" title="car" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="556,259,601,280" alt="park" title="park" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="287,284,362,306" alt="[ɔɹ ̴  oɹ]" title="[ɔɹ ̴  oɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="463,286,507,306" alt="poor" title="poor" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="512,287,563,306" alt="more" title="more" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="568,288,614,306" alt="tore" title="tore" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="284,309,414,331" alt="[iər ̴  iɹ ̴  ɪəɹ]" title="[iər ̴  iɹ ̴  ɪəɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="459,312,505,331" alt="near" title="near" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="512,312,557,331" alt="hear" title="hear" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="285,334,375,357" alt="[ɛɹ ̴  ɛəɹ]" title="[ɛɹ ̴  ɛəɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="460,337,489,357" alt="air" title="air" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="497,336,539,357" alt="hair" title="hair" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="284,360,374,384" alt="[ʊɹ ̴  ʊəɹ]" title="[ʊɹ ̴  ʊəɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="459,361,504,384" alt="tour" title="tour" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="506,363,550,384" alt="lure" title="lure" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="284,387,435,408" alt="[jʊɹ ̴  jʊəɹ ̴  jəɹ]" title="[jʊɹ ̴  jʊəɹ ̴  jəɹ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="461,388,505,408" alt="cure" title="cure" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="511,390,554,408" alt="pure" title="pure" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="567,389,639,408" alt="Europe" title="Europe" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="287,411,315,435" alt="[ɾ]" title="[ɾ]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="461,415,518,435" alt="butter" title="butter" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="286,441,313,460" alt="[r]" title="[r]" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="458,442,499,460" alt="carro" title="carro" href="" onclick="LetterSound('');" >
+			<area shape="rect" coords="555,442,594,460" alt="caro" title="caro" href="" onclick="LetterSound('');" >
+			
+		</map>
+	
+	<script src="js/jquery.maphilight.js"></script>
+<script>
+		
+	function LetterSound(key){
+
+		var keys = 	["",""," "];	
+
+		for(var i = 0; i<=keys.length -1; i++){
+			var selected_key = keys[i];
+			if(selected_key == key)
+			{
+				//alert(selected_key + " Mached with given key" + key);
+				var sound = new Audio();
+				sound.src = "sounds/"+selected_key+".mp3";
+				sound.play();
+			}
+		}
+	}
+
+	$('.img-make-resp').maphilight();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keyboard 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src = "js/jquery.js"></script>
+	<script src = "js/imageMapResizer.min.js"></script>
+<style>
+	body 
+	{
+
+		overflow: scroll;
+	}
+	.img-box
+	{
+	    display:flex;
+	    justify-content:center;
+	    box-sizing:border-box;
+	}
+    .img-make-resp
+    {
+        background-repeat:no-repeat;
+    }
+
+</style>
+</head>
+<body>
+
+	<div class="img-box">	
+		<img src="images/keyboard2.png" class="img-make-resp img-fluid" usemap="#keyboard2">	
+		<map name="keyboard2" id="chart1"  >
+		  	<area shape="rect" coords="109,222,141,258" alt="p" title="p" href="javascript:void(0);"  class="letter-key" data-key="p" >
+		  	<area shape="rect" coords="113,199,139,221" alt="b" title="b" href="javascript:void(0);"  class="letter-key" data-key="b" >
+		  	<area shape="rect" coords="136,172,164,202" alt="m" title="m" href="javascript:void(0);"  class="letter-key" data-key="m" >
+		  	<area shape="rect" coords="149,144,184,170" alt="w" title="w" href="javascript:void(0);"  class="letter-key" data-key="w" >
+		  	<area shape="rect" coords="172,117,206,144" alt="f" title="f" href="javascript:void(0);"  class="letter-key" data-key="f" >
+		  	<area shape="rect" coords="192,110,225,131" alt="v" title="v" href="javascript:void(0);"  class="letter-key" data-key="v" >
+		  	<area shape="rect" coords="223,90,248,115" alt="θ" title="θ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="240,78,271,105" alt="ð" title="ð" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="271,66,297,90" alt="t" title="t" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="295,63,323,89" alt="d" title="d" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="318,61,341,83" alt="s" title="s" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="339,61,361,82" alt="z" title="z" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="364,57,391,83" alt="tʄ" title="tʄ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="389,61,424,89" alt="dʒ" title="dʒ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="431,65,451,93" alt="n" title="n" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="453,74,470,97" alt="ɾ" title="ɾ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="472,73,480,103" alt="l" title="l" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="486,78,499,114" alt="ʃ" title="ʃ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="501,93,522,127" alt="ʒ" title="ʒ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="525,103,543,138" alt="ɹ" title="ɹ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="546,124,558,153" alt="j" title="j" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="566,136,591,169" alt="k" title="k" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="571,165,602,188" alt="g" title="g" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="584,189,621,212" alt="ŋ" title="ŋ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="606,214,632,234" alt="h" title="h" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			<area shape="rect" coords="613,239,640,252" alt="ʔ" title="ʔ" href="javascript:void(0);"  class="letter-key" data-key="" >	
+			
+		</map>
+	</div>	
+	<!-- <scirpt src="js/jquery.js"></script> -->	
+	<script src="js/jquery.maphilight.js"></script>
+<script>
+		
+	$(".letter-key").click(function(){
+		var data_Key = $(this).data("key");
+		// var letter = $(this).text();
+		var sound = new Audio();
+		sound.src = "Sounds/"+data_Key+".mp3";
+		sound.play();
+		//alert(data_Key);
+	});
+
+	$('.img-make-resp').maphilight();
+	 $('map').imageMapResize();
+
+</script>
+
+</body>
+</html>
